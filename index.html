@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Photo Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Public gallery</p>
+          <h1>Shared Photo Studio</h1>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="upload-panel">
+          <div class="upload-box">
+            <div class="upload-icon">📸</div>
+            <h2>Upload, view, and download</h2>
+            <p>Anyone can upload a photo here, and everyone can see and download the same gallery.</p>
+            <label for="imageInput" class="upload-button">Select Images</label>
+            <input id="imageInput" type="file" accept="image/*" multiple />
+            <p id="statusMessage" class="status-message">Waiting for Firebase setup</p>
+          </div>
+        </section>
+
+        <section class="gallery-panel">
+          <div class="panel-header">
+            <h3>Community Photos</h3>
+            <span id="photoCount" class="count-badge">0 images</span>
+          </div>
+          <div id="gallery" class="gallery" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
